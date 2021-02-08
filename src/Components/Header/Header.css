@@ -1,0 +1,30 @@
+.header{
+    padding: 15px;
+    display: flex;
+}
+.title{
+    display: flex;
+    align-self: flex-end;
+    padding-left: 5px;
+}
+.logo{
+    width: 70px;
+    height: 50px;
+    
+}
+.title, 
+.logo{
+    cursor: pointer;
+}
+@media (max-width: 300px){
+    .header{
+        padding:10px 5px;
+    }
+    .title{
+        font-size: 1.18rem;
+    }
+    .logo{
+        width: 50px;
+        height: 40px;
+    }
+}
