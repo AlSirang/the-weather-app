@@ -1,24 +1,27 @@
 import "./SearchBar.css";
-import { useState } from "react";
+import { GlobalContext } from "../../Context/GlobalState";
+import { useState, useContext } from "react";
+
 export const SearchBar = () => {
     const [location, updateLocation] = useState("");
+    const { setCity } = useContext(GlobalContext);
     const handleChange = (e) => {
         updateLocation(e.target.value);
     };
     const handleSumbit = (e) => {
         e.preventDefault();
-        console.log(location);
+        setCity(location);
     };
 
     return (
-        <>
-            <form className="form flex">
+        <div className="flex container">
+            <form className="form flex  ">
                 <input
                     className="input"
                     type="text"
                     name="location"
                     id="locaiton"
-                    placeholder="Location e.g. London"
+                    placeholder="Location e.g. Islamabad"
                     value={location}
                     onChange={handleChange}
                 />
@@ -26,6 +29,6 @@ export const SearchBar = () => {
                     Search
                 </button>
             </form>
-        </>
+        </div>
     );
 };

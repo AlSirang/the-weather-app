@@ -37,10 +37,13 @@
     border-color: #17a2b8 ;
     background-color: #17a2b8 ;
   }
-  
-  input::placeholder{
+  .flex{
+    display: flex;
+    justify-content: center;
+}
+::placeholder{
     font-size: 1rem;
-    color: #000;
+    color: #000000;
     
   }
 
@@ -55,7 +58,7 @@
         height: 35px;
     }
     .container{
-        padding: 7%;
+        padding: 20% 7%;
     }
     
 }

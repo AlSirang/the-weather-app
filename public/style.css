@@ -17,7 +17,8 @@ body {
 .container{
   padding: 7% 15%;
 }
-.flex{
-    display: flex;
-    justify-content: center;
+
+
+.colored-section{
+  background-color: #b1b1b13d;
 }
