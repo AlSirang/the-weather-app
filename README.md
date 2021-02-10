@@ -1,12 +1,24 @@
 ## Desktop View
+<details>
+  <summary>Click to See Image!</summary>
+
 ![Desktop View](./desktop.png)
 
+</details>
+
 ## Mobile View
+<details>
+<summary>Click to See Image!</summary>
+
 ![Mobile View](./mobile.png)
+
+</details>
+
 
 ## Available Scripts
 
 In the project directory, you can run:
+
 
 ### `yarn start`
 
