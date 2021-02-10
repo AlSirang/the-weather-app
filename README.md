@@ -1,6 +1,6 @@
 ## Desktop View
 <details>
-  <summary>Click to See Image!</summary>
+<summary>Click to See Image!</summary>
 
 ![Desktop View](./desktop.png)
 
