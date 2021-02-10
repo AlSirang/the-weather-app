@@ -2,7 +2,7 @@
 <details>
 <summary>Click to See Image!</summary>
 
-![Desktop View](./desktop.PNG)
+![Desktop View](./desktop.png)
 
 </details>
 
