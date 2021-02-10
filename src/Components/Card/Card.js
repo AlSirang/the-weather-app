@@ -7,6 +7,7 @@ import { GlobalContext } from "../../Context/GlobalState";
 
 export const Card = () => {
     const { forcast } = useContext(GlobalContext);
+    console.log(forcast);
     const imgSrc = forcast.weather[0].icon
         ? `https://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png`
         : logo;
@@ -16,7 +17,9 @@ export const Card = () => {
                 <div className="container-card flex colored-section">
                     <div className="box">
                         <div className="info">
-                            <h3 className="city-name">{forcast.name}</h3>
+                            <h3 className="city-name">
+                                {forcast.name}, {forcast.sys.country}
+                            </h3>
                             <h3 className="heading"> current Weather</h3>
                             <p className="sub-heading">Tuesday</p>
                             <p className="sub-heading">
