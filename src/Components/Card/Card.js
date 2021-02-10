@@ -1,12 +1,11 @@
 import "./Card.css";
 import { useContext } from "react";
+import { Temperature } from "../Temperature/Temperature";
 import logo from "../Header/cloud.png";
 
 import { GlobalContext } from "../../Context/GlobalState";
 
 export const Card = () => {
-    // helper function to convert temperature
-    const kelvinToFahrenheit = (k) => (((k - 273.15) * 9) / 5 + 32).toFixed(0);
     const { forcast } = useContext(GlobalContext);
     const imgSrc = forcast.weather[0].icon
         ? `https://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png`
@@ -22,12 +21,11 @@ export const Card = () => {
                             <p className="sub-heading">Tuesday</p>
                             <p className="sub-heading">
                                 Temperature:{" "}
-                                {kelvinToFahrenheit(forcast.main.temp)}&deg;F
+                                <Temperature temp={forcast.main.temp} />
                             </p>
                             <p className="sub-heading">
-                                Feels Like:{" "}
-                                {kelvinToFahrenheit(forcast.main.feels_like)}
-                                &deg;F
+                                Feels Like:
+                                <Temperature temp={forcast.main.feels_like} />
                             </p>
                             <p className="sub-heading">
                                 Condition: {forcast.weather[0].description}
