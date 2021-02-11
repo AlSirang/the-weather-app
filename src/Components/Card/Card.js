@@ -1,13 +1,13 @@
 import "./Card.css";
-import { useContext } from "react";
-import { Temperature } from "../Temperature/Temperature";
 import logo from "../Header/cloud.png";
 
+import { useContext } from "react";
 import { GlobalContext } from "../../Context/GlobalState";
+import { Weekday } from "../weekday/weekday";
+import { Temperature } from "../Temperature/Temperature";
 
 export const Card = () => {
     const { forcast } = useContext(GlobalContext);
-    console.log(forcast);
     const imgSrc = forcast.weather[0].icon
         ? `https://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png`
         : logo;
@@ -21,7 +21,7 @@ export const Card = () => {
                                 {forcast.name}, {forcast.sys.country}
                             </h3>
                             <h3 className="heading"> current Weather</h3>
-                            <p className="sub-heading">Tuesday</p>
+                            <Weekday />
                             <p className="sub-heading">
                                 Temperature:{" "}
                                 <Temperature temp={forcast.main.temp} />
