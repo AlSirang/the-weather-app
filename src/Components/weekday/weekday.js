@@ -8,7 +8,7 @@ const weekDays = [
     "Saturday",
 ];
 
-export const Day = () => {
+export const Weekday = () => {
     const weekDay = new Date().getDay();
     const today = weekDays[weekDay];
 
